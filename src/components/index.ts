@@ -1,15 +1,8 @@
-import BordAvatar from "./BordAvatar/BordAvatar";
-import BordFlag from "./BordFlag/BordFlag";
-import BordOneToneIcon from "./BordOneToneIcon/BordOneToneIcon";
-import BordTextInput from "./BordTextInput/BordTextInput";
-import BordTwoToneIcon from "./BordTwoToneIcon/BordTwoToneIcon";
-import BordBackButton from "./BordBackButton/BordBackButton";
+// src/components/index.ts
 
-export {
-  BordAvatar,
-  BordFlag,
-  BordOneToneIcon,
-  BordTextInput,
-  BordTwoToneIcon,
-  BordBackButton
-};
+export * from './BordAvatar/BordAvatar';
+export * from './BordFlag/BordFlag';
+export * from './BordOneToneIcon/BordOneToneIcon';
+export * from './BordTextInput/BordTextInput';
+export * from './BordTwoToneIcon/BordTwoToneIcon';
+export * from './BordBackButton/BordBackButton';
