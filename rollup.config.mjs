@@ -13,7 +13,7 @@ export default {
       interop: 'auto',
     },
     {
-      file: 'dist/index.esm.js',
+      file: 'dist/index.esm.js', // Este es el que usa Vite/Boilerplate
       format: 'esm',
       sourcemap: true,
     },
@@ -24,9 +24,9 @@ export default {
     commonjs(),
     typescript({ useTsconfigDeclarationDir: true }),
     postcss({
-      extract: true,
+      extract: false, // 👈 CAMBIO: Ponlo en false o bórralo
+      inject: true, // 👈 AÑADIR: Esto inyecta el CSS en el <head> automáticamente
       minimize: true,
-      // MODIFICACIÓN: Agregada API moderna para evitar el error de Legacy JS API
       use: [
         [
           'sass',
@@ -37,6 +37,5 @@ export default {
       ],
     }),
   ],
-  // MODIFICACIÓN: Agregado react/jsx-runtime para evitar error de Dispatcher
   external: ['react', 'react-dom', 'react/jsx-runtime'],
 };
