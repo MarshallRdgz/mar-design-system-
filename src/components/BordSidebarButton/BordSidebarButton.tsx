@@ -1,8 +1,8 @@
-import { IbordSidebarButtonProps } from "./BordSidebarButton.types";
-import { BordTwoToneIcon } from "..";
-import { bordColorTheme } from "../../styles/constants";
-import { useEffect, useState } from "react";
-import "./BordSidebarButton.scss";
+import { IbordSidebarButtonProps } from './BordSidebarButton.types';
+import BordTwoToneIcon from '../BordTwoToneIcon/BordTwoToneIcon';
+import { bordColorTheme } from '../../styles/constants';
+import { useEffect, useState } from 'react';
+import './BordSidebarButton.scss';
 
 const BordSidebarButton = ({
   isSelected = false,
@@ -14,8 +14,8 @@ const BordSidebarButton = ({
 }: IbordSidebarButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const selectedStyles = isSelected ? "selected" : "";
-  const closedStyles = isOpen ? "" : "closed";
+  const selectedStyles = isSelected ? 'selected' : '';
+  const closedStyles = isOpen ? '' : 'closed';
   const classnames = `bordSidebarButton ${selectedStyles} ${closedStyles}`;
 
   const getIconColors = () => {
@@ -49,16 +49,8 @@ const BordSidebarButton = ({
   }, []);
 
   return (
-    <button
-      className={classnames}
-      disabled={disabled}
-      onMouseEnter={startHover}
-      onMouseLeave={stoptHover}
-      {...rest}
-    >
-      {buttonIcon && (
-        <BordTwoToneIcon variant={buttonIcon} colorTones={iconColors} />
-      )}
+    <button className={classnames} disabled={disabled} onMouseEnter={startHover} onMouseLeave={stoptHover} {...rest}>
+      {buttonIcon && <BordTwoToneIcon variant={buttonIcon} colorTones={iconColors} />}
       {isOpen && buttonText}
     </button>
   );
