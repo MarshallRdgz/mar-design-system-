@@ -1,12 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react/*";
-import BordButton from "./BordButton";
-import { fn } from "@storybook/test";
+import type { Meta, StoryObj } from '@storybook/react/*';
+import { BordButton } from './BordButton';
+import { fn } from '@storybook/test';
 
 const meta = {
-  title: "BordButton",
+  title: 'BordButton',
   component: BordButton,
   args: {
-    customWidth: "",
+    customWidth: '',
     onClick: fn(),
   },
 } satisfies Meta;
@@ -17,34 +17,34 @@ type Story = StoryObj<typeof BordButton>;
 
 export const Primary: Story = {
   args: {
-    customWidth: "w-180",
+    customWidth: 'w-180',
     disabled: false,
     isLoading: false,
-    modeButton: "primary",
+    modeButton: 'primary',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    customWidth: "w-180",
+    customWidth: 'w-180',
     disabled: false,
     isLoading: false,
-    modeButton: "secondary",
+    modeButton: 'secondary',
   },
 };
 
 export const Tertiary: Story = {
   args: {
-    customWidth: "w-180",
+    customWidth: 'w-180',
     disabled: false,
     isLoading: false,
-    modeButton: "tertiary",
+    modeButton: 'tertiary',
   },
 };
 
 export const Loading: Story = {
   args: {
-    customWidth: "w-180",
+    customWidth: 'w-180',
     disabled: true,
     isLoading: true,
   },
