@@ -7,4 +7,8 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['storybook'],
   },
+  // MODIFICACIÓN: Agregado para evitar que React se duplique entre la librería y el proyecto
+  resolve: {
+    dedupe: ['react', 'react-dom'],
+  },
 });

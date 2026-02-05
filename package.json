@@ -1,6 +1,6 @@
 {
   "name": "mar-design-system",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "type": "module",
   "main": "dist/index.js",
@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "start": "vite",
-    "build": "rollup -c",
+    "build": "rm -rf dist && rollup -c",
     "lint": "eslint .",
     "lint:fix": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "preview": "vite preview",
@@ -28,7 +28,8 @@
   },
   "peerDependencies": {
     "react": ">=18.3.1",
-    "react-dom": ">=18.3.1"
+    "react-dom": ">=18.3.1",
+    "react/jsx-runtime": ">=18.3.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.9.0",
