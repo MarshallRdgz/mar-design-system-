@@ -3,7 +3,7 @@ import { TcountryCode } from './BordFlag.types';
 import { roundedFlags } from './RoundedFlags/roundedFlags';
 import { squareFlags } from './SquareFlags/squareFlags';
 
-const BordFlag = ({ country = 'zz', variant, standardSize = 12, customWidth }: IbordFlagProps) => {
+export const BordFlag = ({ country = 'zz', variant, standardSize = 12, customWidth }: IbordFlagProps) => {
   const flags = variant === 'circle' ? roundedFlags : squareFlags;
 
   const standardSizeStyle = `${(standardSize / 10).toFixed(1)}rem`;
@@ -15,8 +15,6 @@ const BordFlag = ({ country = 'zz', variant, standardSize = 12, customWidth }: I
     </div>
   );
 };
-
-export default BordFlag;
 
 export interface IbordFlagProps extends ComponentProps<'svg'> {
   country?: TcountryCode;
