@@ -24,18 +24,18 @@ tsconfig.tsbuildinfo
 *.sln
 *.sw?
 
-# Library specific
-src
-.storybook
+# Library specific - COMENTADOS PARA QUE GITHUB PUEDA COMPILAR Y PUBLICAR
+# src             <-- Comentado: el robot necesita los archivos fuente
+# .storybook
 storybook-static
-rollup.config.mjs
-tsconfig.json
+# rollup.config.mjs <-- Comentado: el robot necesita la receta de cocina
+# tsconfig.json     <-- Comentado: el robot necesita la config de TypeScript
 .nvmrc
-.github
+# .github           <-- Comentado: el robot necesita sus instrucciones
 yarn.lock
 *.stories.tsx
 *.test.tsx
-.eslint*
-.prettier*
+# .eslint*
+# .prettier*
 husky
 !dist/
