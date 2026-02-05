@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import { IBordPhotoProps } from './BordPhoto.types';
 import BordAvatar from '../BordAvatar/BordAvatar';
 import BordOneToneIcon from '../BordOneToneIcon/BordOneToneIcon';
-import BordFlag from '../BordFlag/BordFlag';
+import { BordFlag } from '../BordFlag/BordFlag';
 import BordToolModelMarker from '../BordToolModelMarker/BordToolModelMarker';
 import './BordPhoto.scss';
 
