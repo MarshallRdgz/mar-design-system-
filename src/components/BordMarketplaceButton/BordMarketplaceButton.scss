@@ -1,0 +1,42 @@
+.bordMarketplaceButton {
+  @apply rounded-lg p-2 text-sm font-medium mx-auto w-max max-w-140 my-auto h-42;
+  box-shadow: 0px 0px 8px 0px rgba(34, 207, 171, 1);
+  &.light {
+    @apply text-cyan-600;
+    background: linear-gradient(95.49deg, #60ddc3 0.3%, #23a5ff 93.7%);
+    .bordMarketplaceButtonContainer {
+      &:hover {
+        @apply text-navy-blue-900;
+        background: transparent;
+        .bordOneToneIcon svg path {
+          @apply stroke-navy-blue-900;
+        }
+      }
+    }
+    .bordOneToneIcon svg path {
+      @apply stroke-cyan-600;
+    }
+  }
+  &.dark {
+    @apply text-primary-bg-default;
+    background: linear-gradient(95.49deg, #22cfab 0.3%, #0057a7 93.7%);
+    .bordMarketplaceButtonContainer {
+      &:hover {
+        @apply text-content;
+        background: transparent;
+        .bordOneToneIcon svg path {
+          @apply stroke-content;
+        }
+      }
+    }
+    .bordOneToneIcon svg path {
+      @apply stroke-primary-bg-default;
+    }
+  }
+  .bordMarketplaceButtonContainer {
+    @apply flex gap-8 items-center bg-primary-fg-default rounded-lg p-10 h-38;
+  }
+  &:active {
+    @apply opacity-75;
+  }
+}

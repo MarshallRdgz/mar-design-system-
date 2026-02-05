@@ -1,0 +1,82 @@
+.modalContent {
+  @apply relative z-50 rounded-md bg-layout-backgroud flex flex-col justify-center items-center;
+
+  .contentHeader {
+    @apply flex flex-row items-center justify-center select-none mt-40;
+
+    .title {
+      @apply text-[2rem] font-bold text-content;
+    }
+
+    .subTitle {
+      @apply text-bord-sm text-content-secondary;
+    }
+  }
+
+  .leftAlignmentTitle {
+    @apply justify-start;
+  }
+
+  .customSectionContainer {
+    @apply overflow-y-scroll;
+  }
+
+  .customModalContainer {
+    @apply h-full flex justify-center items-start mt-30 overflow-auto px-40;
+  }
+
+  .withoutHeader {
+    @apply mt-40 w-full h-full overflow-auto px-40;
+  }
+
+  .exitContentButton {
+    @apply absolute select-none cursor-pointer top-24 right-24;
+  }
+
+  .buttonsContainer {
+    @apply flex justify-center gap-12 p-30;
+  }
+
+  &.sm {
+    @apply w-480 h-340;
+  }
+
+  &.md {
+    @apply w-580 h-480;
+  }
+
+  &.lg {
+    @apply w-680 h-480;
+  }
+}
+
+.modalShow {
+  display: grid;
+  animation: animationShow 0.2s;
+}
+@keyframes animationShow {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modalHide {
+  z-index: -1;
+  opacity: 0;
+  animation: animationHide 0.25s;
+}
+@keyframes animationHide {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,22 @@
+const SquareQatar = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 16">
+      <g clipPath="url(#a)">
+        <rect width="22" height="16" fill="#AF010D" rx="2" />
+        <path
+          fill="white"
+          fillRule="evenodd"
+          d="M5.2381 0L8.38095 1.06667L5.2381 2.13333L8.38095 3.2L5.2381 4.26667L8.38095 5.33333L5.2381 6.4L8.38095 7.46667L5.2381 8.53333L8.38095 9.6L5.2381 10.6667L8.38095 11.7333L5.2381 12.8L8.38095 13.8667L5.2381 14.9333L8.38095 16H0V0H5.2381Z"
+          clipRule="evenodd"
+        />
+      </g>
+      <defs>
+        <clipPath id="a">
+          <path fill="white" d="M0 0H22V16H0z" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+
+export default SquareQatar;

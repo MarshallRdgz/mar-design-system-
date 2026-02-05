@@ -1,0 +1,27 @@
+.bordTextButton {
+  @apply relative h-max w-max flex items-center gap-4 cursor-pointer select-none;
+  .text {
+    @apply text-primary-bg-default flex items-center content-center text-[1rem];
+  }
+
+  .hoverElementContainer {
+    @apply hidden;
+  }
+
+  &.disabled {
+    @apply cursor-not-allowed;
+    svg path {
+      @apply stroke-disabled-bg-primary;
+    }
+
+    .text {
+      @apply text-disabled-bg-primary;
+    }
+  }
+
+  &:hover {
+    .hoverElementContainer {
+      @apply block;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.bordTextArea {
+  @apply flex flex-col gap-8 text-bord-md text-content-secondary;
+  .bordTextAreaLabel {
+    @apply text-content-secondary;
+  }
+  .bordTextAreaContent {
+    @apply flex gap-8 border border-solid border-stroke-interactive w-full h-full rounded-md p-12 text-navy-blue-600;
+
+    .bordTextAreaIcon {
+      @apply pt-2;
+
+      svg {
+        path {
+          @apply stroke-stroke-interactive;
+        }
+      }
+      &:focus-within {
+        svg {
+          path {
+            @apply stroke-white;
+          }
+        }
+      }
+    }
+    .bordTextAreaInput {
+      @apply bg-transparent resize-none pt-0;
+      &:focus-visible {
+        @apply outline-none;
+      }
+    }
+    &:focus-within {
+      @apply border-cyan-300 text-white;
+    }
+  }
+
+  &:hover {
+    .bordTextAreaContent {
+      @apply border-white text-white;
+      .bordTextAreaIcon {
+        svg {
+          path {
+            @apply stroke-white;
+          }
+        }
+      }
+    }
+  }
+  &:focus {
+    .bordTextAreaContent {
+      @apply border-cyan-300 text-white;
+    }
+  }
+  &.filled {
+    .bordTextAreaContent {
+      @apply border-stroke-interactive text-white;
+      .bordTextAreaIcon {
+        svg {
+          path {
+            @apply stroke-white;
+          }
+        }
+      }
+    }
+  }
+  &.error {
+    @apply text-red-bright-500;
+    .bordTextAreaLabel {
+      @apply text-red-bright-500;
+    }
+    .bordTextAreaContent {
+      @apply border-red-bright-500;
+      .bordTextAreaIcon {
+        svg {
+          path {
+            @apply stroke-red-bright-500;
+          }
+        }
+      }
+      .bordTextAreaInput {
+        &::placeholder {
+          @apply text-red-bright-500;
+        }
+      }
+    }
+  }
+
+  &.disabled {
+    @apply text-disabled-fg-secondary;
+    .bordTextAreaLabel {
+      @apply text-disabled-fg-secondary;
+    }
+    .bordTextAreaContent {
+      @apply border-navy-blue-600 text-navy-blue-600 cursor-not-allowed bg-disabled-bg-secondary;
+      s .bordTextAreaIcon {
+        svg {
+          path {
+            @apply stroke-navy-blue-600;
+          }
+        }
+      }
+      .bordTextAreaInput {
+        @apply cursor-not-allowed;
+        &::placeholder {
+          @apply text-navy-blue-600;
+        }
+      }
+      &:hover {
+        svg {
+          path {
+            @apply stroke-navy-blue-600;
+          }
+        }
+      }
+    }
+  }
+
+  .bordTextAreaInfo {
+    @apply flex justify-between;
+  }
+}
+.bordButtonSkeletonLoader {
+  @apply flex flex-col  p-4 cursor-pointer;
+  .skeletonLabel {
+    @apply p-4 mb-4 text-bord-sm font-normal text-wrap w-40;
+  }
+  .skeletonContent {
+    @apply p-20 text-bord-sm font-normal text-wrap border border-stroke-interactive rounded-md;
+  }
+  .skeletonInfo {
+    @apply flex justify-between;
+    .skeletonCaption,
+    .skeletonDescription {
+      @apply p-4 w-40 mt-4;
+    }
+  }
+}

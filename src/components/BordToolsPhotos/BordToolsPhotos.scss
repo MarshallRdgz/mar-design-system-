@@ -1,0 +1,11 @@
+.bordToolsPhotos {
+  @apply p-8 bg-content border-stroke-interactive border-[0.2rem] border-solid;
+
+  &.rounded {
+    @apply rounded-full;
+  }
+
+  &.square {
+    @apply rounded-xl;
+  }
+}

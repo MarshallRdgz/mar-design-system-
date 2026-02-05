@@ -1,0 +1,6 @@
+.bordBackButton {
+  @apply flex gap-4 items-center select-none cursor-pointer;
+  .buttonText {
+    @apply text-content text-xs;
+  }
+}

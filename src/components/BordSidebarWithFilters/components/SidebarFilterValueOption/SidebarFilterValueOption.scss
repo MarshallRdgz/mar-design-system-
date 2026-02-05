@@ -1,0 +1,7 @@
+.sidebarFilterValueOption {
+  @apply h-18 mb-4;
+
+  &:last-of-type {
+    @apply mb-0;
+  }
+}

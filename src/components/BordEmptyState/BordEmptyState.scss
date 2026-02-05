@@ -1,0 +1,19 @@
+.bordEmptyStateContainer {
+  @apply flex flex-col text-center items-center gap-24;
+
+  .titleAndSubTitleContainer {
+    @apply max-w-580 w-max select-none;
+
+    .title {
+      @apply text-content text-bord-h2 font-bold;
+    }
+
+    .subTitle {
+      @apply text-content-secondary mt-8 text-bord-subtitle font-normal;
+    }
+  }
+
+  .buttonsContainer {
+    @apply flex items-center gap-12;
+  }
+}

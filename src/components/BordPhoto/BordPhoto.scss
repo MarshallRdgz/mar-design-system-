@@ -1,0 +1,71 @@
+.bordPhoto {
+  // BASE STYLES
+  @apply flex items-center justify-center bg-content border-stroke-interactive border-[0.2rem] border-solid overflow-x-hidden overflow-y-hidden;
+
+  img {
+    width: 80%;
+    height: auto;
+  }
+
+  // VARIANT STYLES
+  &.circle {
+    @apply rounded-full;
+  }
+
+  &.square {
+    @apply rounded-xl;
+  }
+
+  // STANDARD SIZES STYLES
+  &.s20 {
+    @apply w-20 h-20 border-[0.1rem];
+    &.square {
+      @apply rounded-[0.4rem];
+    }
+  }
+
+  &.s32 {
+    @apply w-32 h-32 border-[0.1rem];
+    &.square {
+      @apply rounded-[0.4rem];
+    }
+  }
+
+  &.s48 {
+    @apply w-48 h-48 border-[0.1rem];
+  }
+
+  &.s56 {
+    @apply w-56 h-56 border-[0.1rem];
+  }
+
+  &.s64 {
+    @apply w-64 h-64;
+  }
+
+  &.s100 {
+    @apply w-100 h-100;
+  }
+
+  // PLACEHOLDER STYLES
+  &.avatarStyle {
+    @apply border-none bg-transparent rounded-none;
+  }
+
+  // ADDITIONAL DATA STYLES
+  &.additionalData {
+    @apply relative overflow-x-visible overflow-y-visible;
+
+    .bordFlag {
+      @apply absolute;
+      bottom: -12%;
+      right: -12%;
+    }
+
+    .bordToolModelMarker {
+      @apply absolute;
+      bottom: -15%;
+      right: -15%;
+    }
+  }
+}

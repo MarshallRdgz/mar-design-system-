@@ -1,0 +1,16 @@
+.bordMentions {
+  @apply rounded-md border border-gray-300 relative;
+
+  .bordMentionsInputContainer {
+    @apply w-full h-full overflow-y-auto;
+    height: calc(100% - 2.4rem);
+
+    .bordMentionsInput {
+      @apply h-max mx-auto p-8 text-white;
+      width: 100%;
+      &:focus {
+        @apply outline-none;
+      }
+    }
+  }
+}

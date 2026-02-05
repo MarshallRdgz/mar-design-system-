@@ -1,0 +1,61 @@
+.bordDatePicker {
+  .bordDatePickerLabel {
+    @apply block mb-4 text-white text-bord-sm select-none;
+  }
+  input {
+    @apply bg-transparent w-full h-40 px-16 text-bord-md border border-solid rounded-md border-navy-blue-600 text-disabled-fg-secondary leading-none;
+    &::placeholder {
+      @apply text-bord-md leading-3 text-disabled-fg-secondary;
+    }
+    &:hover {
+      @apply border-white text-white cursor-pointer;
+    }
+    &:focus {
+      @apply outline-none border-cyan-300 text-white;
+    }
+    &:active {
+      @apply border-cyan-300 text-white;
+    }
+    &::-webkit-calendar-picker-indicator {
+      background-image: url("../../assets/CalendarInactiveIcon.svg");
+    }
+  }
+  .errorText {
+    @apply text-red-bright-500 mt-2 text-xss;
+  }
+  &.filled {
+    .bordDatePickerLabel {
+      @apply text-disabled-fg-secondary;
+    }
+    input {
+      @apply border-navy-blue-700;
+      @apply text-disabled-fg-secondary;
+      &::-webkit-calendar-picker-indicator {
+        background-image: url("../../assets/CalendarActiveIcon.svg");
+      }
+    }
+  }
+  &.error {
+    .bordDatePickerLabel {
+      @apply text-red-bright-500;
+    }
+    input {
+      @apply text-red-bright-500 border-red-bright-500;
+
+      &::-webkit-calendar-picker-indicator {
+        background-image: url("../../assets/CalendarErrorIcon.svg");
+      }
+    }
+  }
+  &.disabled {
+    .bordDatePickerLabel {
+      @apply text-navy-blue-600;
+    }
+    input {
+      @apply bg-disabled-bg-secondary border-navy-blue-600 text-navy-blue-600;
+      &::-webkit-calendar-picker-indicator {
+        background-image: url("../../assets/CalendarInactiveIcon.svg");
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.bordStepsProgressBar {
+  @apply w-max flex items-center leading-3;
+
+  .progressStep {
+    @apply flex flex-col items-start text-white;
+  }
+
+  .stepConectorAndStatusContainer {
+    @apply flex items-center;
+  }
+
+  .titleAndSubtitleContainer {
+    @apply mt-16;
+
+    .subTitleContainer {
+      @apply flex items-center gap-4;
+
+      .subTitle {
+        @apply text-bord-md text-content text-nowrap;
+      }
+    }
+  }
+
+  .titleStepper {
+    @apply text-[1rem] text-content-secondary;
+  }
+
+  .inProgressConectorContainer {
+    @apply h-1 mx-2 transition-colors duration-300 flex;
+
+    .inProgressConectorFirst {
+      @apply w-full h-1 bg-informative-bg-primary;
+    }
+
+    .inProgressConectorSecond {
+      @apply w-full h-1 bg-disabled-fg-secondary;
+    }
+  }
+
+  .successConector {
+    @apply h-1 mx-2 transition-colors duration-300 bg-success;
+  }
+
+  .waitingConector {
+    @apply h-1 mx-2 transition-colors duration-300 bg-disabled-fg-secondary;
+  }
+}
+
+.bordProgressBarSkeletonLoader {
+  @apply w-max flex gap-4 items-center;
+  .stepSkeleton {
+    @apply bg-gray-500 rounded-full;
+  }
+
+  .skeletonConector {
+    @apply min-w-190 h-1;
+  }
+}

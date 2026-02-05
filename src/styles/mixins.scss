@@ -1,0 +1,22 @@
+@mixin visibleScrollBar($width: 2px, $border: 0.2px) {
+  &::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply border-4 rounded bg-primary-bg-default;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply border-4 bg-stroke;
+  }
+}
+
+@mixin showWhenHovered($className) {
+  @apply relative;
+  &:hover {
+    .#{$className} {
+      @apply block;
+    }
+  }
+}

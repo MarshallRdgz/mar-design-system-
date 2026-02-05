@@ -1,0 +1,32 @@
+.moduleFilterExpandableSelect {
+  @apply relative w-max flex gap-8 items-center justify-between text-xs
+    font-medium leading-normal text-content-secondary select-none
+    cursor-pointer p-8 border border-navy-blue-700 rounded-lg bg-inherit;
+  .closedSelect {
+    @apply grow text-content-secondary;
+  }
+  .arrowIcon {
+    .bordOneToneIcon {
+      svg {
+        path {
+          @apply stroke-content-secondary;
+        }
+      }
+    }
+  }
+  .bordGenericSelect {
+    @apply w-max max-w-200 h-fit absolute p-8 text-gray-500 z-10 bg-inherit
+      overflow-y-auto cursor-default rounded text-xss leading-[1rem] shadow-4x;
+    .optionContainer {
+      @apply mb-8 flex gap-10 items-center  cursor-pointer justify-between;
+      .optionText {
+        @apply flex items-center gap-8 w-full justify-start text-content-secondary;
+      }
+    }
+  }
+  &.active {
+    .closedSelect {
+      @apply text-content font-medium;
+    }
+  }
+}

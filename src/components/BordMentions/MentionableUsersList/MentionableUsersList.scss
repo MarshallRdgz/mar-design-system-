@@ -1,0 +1,10 @@
+@use '../../../styles/mixins.scss' as mixins;
+
+.mentionableUsersList {
+  @apply absolute z-30 w-full h-full p-8 bg-white rounded-md overflow-y-auto;
+  @include mixins.visibleScrollBar();
+
+  .mentionableUsersListSearch {
+    @apply text-sm text-gray-500 mb-4;
+  }
+}

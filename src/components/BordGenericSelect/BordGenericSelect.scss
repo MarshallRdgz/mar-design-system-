@@ -1,0 +1,13 @@
+@use '../../styles/mixins.scss' as mixins;
+
+.bordGenericSelect {
+  @apply absolute top-10 w-max h-max max-h-300 mt-32 left-0 p-8 rounded-md bg-white overflow-y-auto text-xs leading-4 shadow-4x;
+  @include mixins.visibleScrollBar();
+
+  .optionContainer {
+    @apply mb-3 flex gap-10 items-center select-none cursor-pointer;
+    .optionText {
+      @apply flex items-center gap-10;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.bordProfileSummary {
+  @apply flex items-center gap-12;
+}
+
+.bordProfileSummaryTextContainer {
+  @apply w-136 text-bord-md text-content-secondary  select-none;
+
+  .bordProfileSummaryTitle {
+    @apply truncate;
+  }
+
+  .bordProfileSummarySubTitle {
+    @apply opacity-75 truncate;
+  }
+}

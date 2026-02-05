@@ -1,0 +1,19 @@
+.mentionableUser {
+  @apply mb-4 p-2 flex items-center gap-4 cursor-pointer rounded-sm;
+  .mentionableUserInfo {
+    .mentionableUserInfoName {
+      @apply -mb-2 text-xss font-bold;
+    }
+    .mentionableUserInfoEmail {
+      @apply text-xss text-gray-500;
+    }
+  }
+
+  &:last-child {
+    @apply mb-0;
+  }
+
+  &:hover {
+    @apply bg-gray-200;
+  }
+}

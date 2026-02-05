@@ -1,0 +1,14 @@
+.bordSidebar {
+  @apply w-64 h-screen overflow-y-scroll bg-layout-level1 border-r border-t border-solid border-stroke;
+  transition: all 0.5s ease-out;
+
+  .divider {
+    @apply mt-auto mb-4 mx-auto border-b border-solid border-stroke;
+    // margin top calculation: 100vh - topModulesHeight - lowerModulesHeight
+    margin-top: calc(100vh - 36rem - 13.2rem);
+  }
+
+  &.open {
+    @apply w-200;
+  }
+}

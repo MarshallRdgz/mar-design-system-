@@ -1,0 +1,29 @@
+const SquareDjibouti = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 16">
+      <g clipPath="url(#a)">
+        <g clipPath="url(#b)">
+          <rect width="22" height="16" fill="#249F58" rx="2" />
+          <path fill="#3ECBF8" fillRule="evenodd" d="M0 0H22V8H0V0Z" clipRule="evenodd" />
+          <path fill="white" fillRule="evenodd" d="M0 0L12.5714 8L0 16V0Z" clipRule="evenodd" />
+          <path
+            fill="#F93939"
+            fillRule="evenodd"
+            d="M4.71389 9.3335L3.17389 10.158L3.46723 8.4119L2.22266 7.17456L3.94389 6.92176L4.71389 5.3335L5.48389 6.92283L7.20513 7.17563L5.95847 8.41296L6.2518 10.158"
+            clipRule="evenodd"
+          />
+        </g>
+      </g>
+      <defs>
+        <clipPath id="a">
+          <path fill="white" d="M0 0H22V16H0z" />
+        </clipPath>
+        <clipPath id="b">
+          <rect width="22" height="16" fill="white" rx="2" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+
+export default SquareDjibouti;

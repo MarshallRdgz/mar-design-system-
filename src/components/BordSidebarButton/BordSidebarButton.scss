@@ -1,0 +1,22 @@
+.bordSidebarButton {
+  // BASE STYLES
+  @apply w-172 p-8 flex items-center gap-8 rounded-lg text-content-secondary text-bord-md select-none;
+
+  // **************************** //
+  // STATUS SPECIFIC STYLES
+  &.selected:not(:disabled) {
+    @apply bg-primary-bg-secondary text-primary-bg-default;
+  }
+
+  &:hover:not(:disabled) {
+    @apply bg-layout-level2 text-content;
+  }
+
+  &:disabled {
+    @apply bg-transparent text-disabled-fg-secondary cursor-not-allowed;
+  }
+
+  &.closed {
+    @apply w-40;
+  }
+}

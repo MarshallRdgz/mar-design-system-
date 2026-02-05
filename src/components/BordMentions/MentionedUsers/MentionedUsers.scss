@@ -1,0 +1,30 @@
+@use '../../../styles/mixins.scss' as mixins;
+
+.mentionedUsers {
+  @apply flex gap-x-4 gap-y-2 bg-gray-100 rounded-md p-2 overflow-x-auto;
+  @include mixins.visibleScrollBar();
+
+  .mentionedUser {
+    @apply z-10;
+
+    .mentionedUserSummary {
+      @apply flex gap-1 font-bold text-bord-blue;
+      font-size: 0.75rem;
+
+      .mentionedUserEmail {
+        @apply w-max;
+      }
+
+      .bordOneToneIcon {
+        @apply cursor-pointer;
+      }
+    }
+
+    .mentionableUser {
+      @apply hidden;
+      &:hover {
+        @apply block;
+      }
+    }
+  }
+}

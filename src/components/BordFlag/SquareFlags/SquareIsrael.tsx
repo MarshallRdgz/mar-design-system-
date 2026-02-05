@@ -1,0 +1,22 @@
+const SquareIsrael = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 16">
+      <g clipPath="url(#a)">
+        <rect width="22" height="16" fill="white" rx="2" />
+        <path
+          fill="#1A47B8"
+          fillRule="evenodd"
+          d="M0 11.7333H22V13.8666H0V11.7333ZM0 2.1333H22V4.26663H0V2.1333ZM10.3452 9.59997H8.38095L9.36362 7.99997L8.38095 6.39997H10.3452L11 5.3333L11.6548 6.39997H13.619L12.6364 7.99997L13.619 9.59997H11.6548L11 10.6666L10.3452 9.59997ZM9.95238 7.99997L11 6.9333L12.0476 7.99997L11 9.06663L9.95238 7.99997Z"
+          clipRule="evenodd"
+        />
+      </g>
+      <defs>
+        <clipPath id="a">
+          <path fill="white" d="M0 0H22V16H0z" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+
+export default SquareIsrael;

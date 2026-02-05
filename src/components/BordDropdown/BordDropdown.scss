@@ -1,0 +1,159 @@
+.bordDropdown,
+.bordDropdownSkeletonLoader {
+  @apply w-full text-content-secondary;
+  .componentLabel {
+    @apply w-full mb-4 select-none text-content text-xss;
+  }
+
+  .componentDropdown {
+    @apply w-full relative;
+    .closedDropdown,
+    .closedDropdownSkeletonLoader {
+      @apply w-full h-40 px-16 py-11 flex items-center justify-between gap-0.5 bg-layout-backgroud border border-solid border-stroke-interactive rounded-md text-xs leading-4 select-none cursor-pointer;
+      .currentValueOrplaceholder {
+        @apply w-full flex gap-8 items-center;
+        .magnifierIcon path {
+          @apply stroke-content-secondary;
+        }
+        .optionContainer {
+          @apply w-full truncate;
+          .optionFlag {
+            @apply bg-cover bg-center bg-no-repeat rounded-sm relative top-0.5 mb-3 me-2 min-w-12 h-9;
+          }
+        }
+      }
+    }
+    .closedDropdown:hover {
+      @apply border-content;
+    }
+    .nudosSearchBar {
+      @apply w-full bg-white;
+      .searchBarContainer {
+        @apply w-full bg-white h-40;
+        input {
+          @apply w-full h-38;
+        }
+      }
+    }
+    .openDropdown {
+      @apply absolute z-30 w-full px-8 pt-8 pb-12 pr-1 bg-layout-backgroud rounded-md overflow-y-hidden select-none border border-solid border-stroke-interactive mt-4;
+      .dropdownOptionsList {
+        @apply h-auto overflow-y-auto relative max-h-280;
+        .optionContainer {
+          @apply pb-8 text-content text-bord-md leading-4 select-none cursor-pointer hover:text-opacity-75;
+          .optionFlag {
+            @apply bg-cover bg-center bg-no-repeat rounded-sm relative top-0.5 mr-8 min-w-12 h-9 mb-3;
+          }
+        }
+
+      }
+    }
+  }
+
+  .errorText,
+  .caption {
+    @apply w-full text-disabled-fg-secondary mt-4 select-none text-xss leading-[1rem];
+  }
+  .errorText {
+    @apply text-danger text-xss mt-4;
+  }
+
+  &.filled {
+    .componentDropdown {
+      .closedDropdown {
+        @apply border-stroke-interactive border-2;
+      }
+    }
+  }
+
+  &.error {
+    @apply text-danger text-xss;
+    .componentLabel {
+      @apply text-danger;
+    }
+    .componentDropdown {
+      .closedDropdown {
+        @apply border-danger;
+        .magnifierIcon path {
+          @apply stroke-danger;
+        }
+        svg path {
+          @apply stroke-danger;
+        }
+      }
+    }
+  }
+
+  &.deactivated {
+    @apply text-disabled-fg-secondary;
+    .componentLabel,
+    .caption {
+      @apply text-disabled-fg-secondary mt-4;
+    }
+    .componentDropdown {
+      .closedDropdown {
+        @apply border-disabled-fg-secondary bg-disabled-bg-secondary cursor-not-allowed;
+      }
+    }
+  }
+
+  &.extraSmall {
+    @apply min-w-80 max-w-80;
+  }
+
+  &.small {
+    @apply min-w-180 max-w-180;
+  }
+
+  &.small-184 {
+    @apply min-w-84 max-w-184;
+  }
+
+  &.medium {
+    @apply min-w-280 max-w-280;
+  }
+
+  &.large {
+    @apply min-w-380 max-w-380;
+  }
+
+  &.w-80 {
+    @apply max-w-80;
+  }
+
+  &.w-180 {
+    @apply max-w-180;
+  }
+
+  &.w-280 {
+    @apply max-w-280;
+  }
+
+  &.w-380 {
+    @apply min-w-380 max-w-380;
+  }
+
+  &.matchingBackground {
+    .componentDropdown {
+      .closedDropdown,
+      .closedDropdownSkeletonLoader {
+        @apply max-h-3 p-0 border-none bg-transparent leading-3 text-xss;
+      }
+
+      
+    }
+  }
+}
+
+.bordDropdownSkeletonLoader {
+  .componentDropdown {
+    .currentValueOrplaceholder {
+      .selectedOption {
+        @apply text-xs leading-4;
+      }
+    }
+    .closedDropdownSkeletonLoader {
+      @apply border-none cursor-default;
+    }
+  }
+}

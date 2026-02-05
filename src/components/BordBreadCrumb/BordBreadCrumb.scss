@@ -1,0 +1,19 @@
+.bordBreadCrumb {
+  @apply flex items-center leading-[0] cursor-pointer;
+  .bordHeaderBreadCrumb {
+    @apply flex items-center gap-2 leading-[1.4rem];
+    .bordFirstSectionTitle,
+    .bordSecondSectionTitle {
+      @apply text-bord-md text-content-secondary;
+    }
+  }
+  .headerBordSubtitle {
+    @apply text-content-secondary text-bord-md font-medium leading-[1.4rem];
+  }
+  .separatorCharacter {
+    @apply text-bord-md;
+  }
+  .separatorCharacter {
+    @apply text-content-secondary mr-2;
+  }
+}

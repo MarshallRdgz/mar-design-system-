@@ -1,0 +1,83 @@
+.bordRadioButton {
+  // BASE STYLES
+  @apply flex items-center gap-8  cursor-pointer select-none;
+
+  .bordRadioButtonLabel {
+    @apply text-bord-md text-content-secondary;
+  }
+
+  .bordRadioButtonSvg {
+    .largeRect {
+      @apply fill-content-secondary;
+    }
+    .smallRect {
+      @apply fill-navy-blue-900;
+    }
+    .innerCircle {
+      @apply fill-navy-blue-900;
+    }
+  }
+
+  // **************************** //
+  // STATUS SPECIFIC STYLES
+  &.active {
+    .bordRadioButtonSvg {
+      .largeRect {
+        @apply fill-primary-bg-default;
+      }
+      .smallRect {
+        @apply fill-navy-blue-900;
+      }
+      .innerCircle {
+        @apply fill-primary-bg-default;
+      }
+    }
+
+    .bordRadioButtonLabel {
+      @apply text-cyan-300;
+    }
+  }
+
+  &.inactive {
+    .bordRadioButtonSvg {
+      .largeRect {
+        @apply fill-disabled-bg-primary;
+      }
+      .smallRect {
+        @apply fill-navy-blue-900;
+      }
+      .innerCircle {
+        @apply fill-disabled-bg-primary;
+      }
+    }
+
+    .bordRadioButtonLabel {
+      @apply text-navy-blue-700;
+    }
+  }
+
+  &.disabled {
+    @apply cursor-not-allowed;
+    .bordRadioButtonSvg {
+      .largeRect {
+        @apply fill-disabled-bg-primary;
+      }
+      .smallRect {
+        @apply fill-disabled-bg-secondary;
+      }
+      .innerCircle {
+        @apply fill-disabled-bg-secondary;
+      }
+    }
+
+    .bordRadioButtonLabel {
+      @apply text-disabled-fg-primary;
+    }
+
+    &.active {
+      .innerCircle {
+        @apply fill-disabled-fg-secondary;
+      }
+    }
+  }
+}

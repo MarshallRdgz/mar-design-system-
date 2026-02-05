@@ -1,0 +1,11 @@
+.bordToolModelMarker {
+  @apply relative flex items-center justify-center rounded-full bg-stroke-interactive;
+
+  .innerCircle {
+    @apply absolute flex items-center justify-center top-1 left-1 rounded-full bg-layout-level2;
+  }
+
+  &.bordTool {
+    @apply block border-none bg-gradient-to-r from-bord-gradient-cyan to-bord-gradient-blue;
+  }
+}

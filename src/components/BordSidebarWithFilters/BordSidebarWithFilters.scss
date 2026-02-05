@@ -1,0 +1,16 @@
+.bordSidebarWithFilters {
+  @apply relative w-200 h-screen overflow-y-scroll bg-layout-level1 border-r border-t border-solid border-stroke;
+  transition: all 0.5s ease-out;
+
+  .bordTextButton {
+    @apply absolute bottom-20 left-30 w-140 py-12 flex items-center justify-center;
+  }
+
+  .filtersTitle {
+    @apply w-max mb-16 px-16 flex items-center gap-8;
+
+    .title {
+      @apply text-white text-bord-subtitle font-medium select-none;
+    }
+  }
+}

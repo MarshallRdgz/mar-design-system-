@@ -1,0 +1,161 @@
+
+.bordButton{
+  @apply border-none rounded-md px-8 py-12 h-auto flex justify-center items-center gap-8;
+  &.ht-42 {
+    @apply h-42;
+  }
+  &.primary{
+    @apply bg-primary-bg-default;
+    .textContainer {
+      @apply text-navy-blue-900 font-medium text-sm leading-[1.823rem];
+    }
+    &:hover {
+      @apply bg-primary-bg-hover ;
+      .textContainer{
+        @apply text-cyan-900
+      }
+    }
+    &:disabled {
+      @apply bg-disabled-bg-primary cursor-not-allowed;
+      .textContainer{
+        @apply text-navy-blue-700
+      }
+      .bordOneToneIcon{
+        &>svg{
+          &>path{
+            @apply stroke-disabled-fg-primary;
+          }
+        }
+      }
+    }
+    &.bordButtonOutlined {
+      @apply border-2 border-solid border-cyan-200 bg-transparent;
+      .bordOneToneIcon{
+        &>svg{
+          &>path{
+            @apply stroke-cyan-300;
+          }
+        }
+      }
+      &:hover {
+        @apply bg-cyan-900;
+      }
+      &:disabled {
+        @apply border-disabled-fg-secondary ;
+        .textContainer{
+          @apply text-navy-blue-600
+        }
+        .bordOneToneIcon{
+        &>svg{
+            &>path{
+              @apply stroke-disabled-fg-secondary;
+            }
+          }
+        }
+      }
+      .textContainer{
+        @apply text-cyan-300;
+      }
+    }
+    .bordOneToneIcon{
+      &>svg{
+        &>path{
+          @apply stroke-primary-fg-default;
+        }
+      }
+    }
+  }
+  &.secondary{
+    @apply bg-secondary-bg-default;
+    .textContainer {
+      @apply text-content-secondary font-medium text-sm leading-[1.823rem];
+    }
+    &:hover {
+      @apply bg-secondary-bg-hover ;
+      .textContainer{
+        @apply text-content;
+      }
+      .bordOneToneIcon{
+        &>svg{
+          &>path{
+            @apply stroke-content;
+          }
+        }
+      }
+    }
+    &:disabled {
+      @apply bg-secondary-bg-default;
+      .textContainer{
+        @apply text-disabled-fg-secondary
+      }
+      .bordOneToneIcon{
+        &>svg{
+          &>path{
+            @apply stroke-disabled-fg-secondary;
+          }
+        }
+      }
+    }
+    &.bordButtonOutlined {
+      @apply border-2 border-solid border-stroke bg-transparent;
+      &:hover {
+        @apply border-stroke-interactive;
+        .textContainer{
+          @apply text-content
+        }
+      }
+      &:disabled {
+        @apply border-disabled-fg-primary ;
+        .textContainer{
+          @apply text-disabled-fg-secondary;
+        }
+      }
+      .textContainer{
+        @apply text-content-secondary;
+      }
+    }
+    .bordOneToneIcon{
+      &>svg{
+        &>path{
+          @apply stroke-content-secondary;
+        }
+      }
+    }
+  }
+  &.tertiary{
+    @apply border-2 border-solid border-stroke bg-transparent;
+    .textContainer {
+      @apply text-content-secondary font-medium text-xs leading-[1.562rem];
+    }
+    &:hover {
+      .textContainer{
+        @apply text-content;
+      }
+      .bordOneToneIcon{
+        &>svg{
+          &>path{
+            @apply stroke-content;
+          }
+      }
+    }
+    }
+    &:disabled {
+      .textContainer{
+        @apply text-disabled-fg-secondary
+      }
+    }
+    .bordOneToneIcon{
+      &>svg{
+        &>path{
+          @apply stroke-content-secondary;
+        }
+      }
+    }
+  }
+  .iconContainer{
+     @apply w-14 h-14 flex justify-center items-center;
+  }
+}
+.bordButtonSkeletonLoader {
+  @apply bg-transparent rounded-md  h-42 pointer-events-none;
+}

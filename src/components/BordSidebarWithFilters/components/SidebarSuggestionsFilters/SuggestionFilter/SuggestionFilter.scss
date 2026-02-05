@@ -1,0 +1,16 @@
+.suggestionFilter {
+  @apply mb-16 overflow-y-hidden;
+  transition: all 0.5s ease-out;
+
+  &:last-of-type {
+    @apply mb-0;
+  }
+
+  .suggestionFilterName {
+    @apply text-bord-md text-white select-none;
+  }
+
+  .filterOptionsContainer {
+    @apply mt-8;
+  }
+}

@@ -1,0 +1,13 @@
+.bordFilters {
+  @apply z-20 pb-4 flex items-center gap-8 bg-inherit text-xs text-content;
+  .bordFiltersIconContainer {
+    @apply w-max min-w-64 flex items-center justify-center gap-8 leading-3 text-xs  select-none cursor-pointer;
+  }
+  .filtersContainer {
+    @apply flex items-center gap-8 bg-inherit;
+  }
+}
+
+.bordFiltersSkeletonLoader {
+  @apply bg-transparent rounded-md  h-42 pointer-events-none;
+}

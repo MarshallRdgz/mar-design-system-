@@ -1,0 +1,31 @@
+.bordActionButton {
+  @apply border-2 border-stroke-interactive text-content rounded-md flex flex-col items-center w-140 justify-center p-8 cursor-pointer;
+
+  &:hover {
+    @apply border-2 border-primary-bg-default text-primary-bg-default bg-cyan-900;
+
+    svg path {
+      @apply stroke-primary-bg-default;
+    }
+  }
+
+  &:disabled {
+    @apply text-disabled-fg-secondary border-disabled-fg-secondary cursor-not-allowed;
+  }
+
+  &:disabled:hover {
+    @apply text-disabled-fg-secondary border-disabled-fg-secondary bg-navy-blue-700;
+
+    svg path {
+      @apply stroke-disabled-fg-secondary;
+    }
+  }
+}
+
+.bordActionButtonSubTitle {
+  @apply mt-8 mb-2 text-bord-sm font-normal text-wrap;
+}
+
+.bordActionButtonTitle {
+  @apply font-bold text-bord-md text-wrap;
+}

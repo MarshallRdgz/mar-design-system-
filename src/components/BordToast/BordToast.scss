@@ -1,0 +1,74 @@
+.toastContainer {
+  @apply min-w-480 w-480 p-16 rounded-md border-[1px] select-none backdrop-blur absolute top-0 right-0 me-15 mt-15;
+
+  &.informative {
+    @apply text-informative-bg-primary border-informative-bg-primary bg-informative-bg-opacity;
+
+    svg path:not(.close-icon path) {
+      @apply stroke-informative-bg-primary;
+    }
+  }
+
+  &.success {
+    @apply text-success border-success bg-success-bg-opacity;
+
+    svg path:not(.close-icon path) {
+      @apply stroke-success;
+    }
+  }
+
+  &.warning {
+    @apply text-warning border-warning bg-warning-bg-opacity;
+
+    svg path:not(.close-icon path) {
+      @apply stroke-warning;
+    }
+  }
+
+  &.danger {
+    @apply text-danger border-danger bg-danger-bg-opacity;
+
+    svg path:not(.close-icon path) {
+      @apply stroke-danger;
+    }
+  }
+}
+
+.toastTitle {
+  @apply font-bold text-bord-subtitle;
+}
+
+.toastDescription {
+  @apply font-normal text-bord-sm text-content;
+}
+
+.toastData {
+  @apply flex items-center justify-between w-full gap-16;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(336px); // width + margin
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.toast-animation {
+  width: 320px;
+  margin: 16px;
+  animation: slideIn 0.5s ease-out, fadeOut 0.2s ease-out 2.3s forwards;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.toast-exit {
+  animation: fadeOut 0.2s ease-out forwards;
+}

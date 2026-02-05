@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 62.5%; // This defines one rem to 10px in the base browser definition, it still adjust its size if user changes the default browser font-size
+  }
+}
+
+html {
+  font-size: 62.5%; // This defines one rem to 10px in the base browser definition, it still adjust its size if user changes the default browser font-size
+}
+
+body {
+  @apply w-screen overflow-x-hidden bg-navy-blue-900;
+}
+
+@keyframes shine-lines {
+  0% {
+    background-position: -2rem;
+  }
+  30%,
+  100% {
+    background-position: 20rem;
+  }
+}
+
+.animationLoader {
+  animation: shine-lines 1s infinite forwards;
+  background-image: linear-gradient(to right, #262b39 0%, #3b4256 50%, #262b39 100%);
+}

@@ -1,0 +1,15 @@
+.badgeContainer {
+  @apply w-max rounded-3xl text-content;
+
+  &.defaultStyles {
+    @apply bg-navy-blue-700 px-8 py-4;
+  }
+
+  &.gradientStyles {
+    @apply bg-gradient-to-r from-bord-gradient-cyan to-bord-gradient-blue p-1;
+  }
+
+  .gradientComponentStyles {
+    @apply h-full w-full bg-primary-bg-secondary rounded-3xl px-8 py-4;
+  }
+}

@@ -1,0 +1,77 @@
+.bordSearchBar {
+  .bordSearchBarLabel {
+    @apply mb-4 text-white text-xs;
+    .loaderLabel {
+      @apply rounded h-16 w-100;
+    }
+  }
+  .searchBarContainerSkeletor {
+    @apply w-full border rounded-md border-none h-40;
+  }
+  .searchBarContainer {
+    @apply w-full border border-solid rounded-md  bg-navy-blue-900 border-navy-blue-600 flex items-center justify-start h-40;
+
+    .magnifierIconContainer {
+      @apply pl-16 w-38;
+    }
+
+    .inputContainer {
+      @apply flex items-center gap-1;
+      width: calc(100% - 7.6rem);
+      input {
+        @apply pr-3 text-xs  leading-3 border-none rounded-md bg-navy-blue-900 text-navy-blue-400 h-38 pb-1;
+        max-width: calc(100% - 3.2rem);
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+        &::placeholder {
+          @apply text-xs leading-3 text-navy-blue-600;
+        }
+      }
+    }
+
+    .right {
+      @apply w-38 flex items-center h-full;
+      .deleteIconContainer {
+        @apply w-full select-none cursor-pointer flex justify-center;
+      }
+    }
+  }
+
+  &.deleteButtonStyles .searchBarContainer input {
+    width: calc(100% - 7rem);
+  }
+
+  svg path {
+    @apply stroke-navy-blue-600;
+  }
+
+  &.filled {
+    label {
+      color: #383838;
+    }
+    svg path {
+      @apply stroke-navy-blue-400;
+    }
+  }
+
+  &.deactivated {
+    .bordSearchBarLabel {
+      @apply text-navy-blue-600;
+    }
+    .searchBarContainer {
+      @apply bg-navy-blue-700 border-navy-blue-600 cursor-not-allowed;
+
+      input {
+        @apply text-navy-blue-600 bg-navy-blue-700 cursor-not-allowed;
+      }
+    }
+  }
+
+  &.error {
+    label {
+      color: red;
+    }
+  }
+}

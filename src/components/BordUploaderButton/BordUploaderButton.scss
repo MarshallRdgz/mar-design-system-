@@ -1,0 +1,164 @@
+.bordUploaderButton {
+  .loaderTextClass {
+    @apply w-100 rounded-sm h-16;
+  }
+  .labelBordUploaderButton {
+    @apply text-white mb-4 truncate;
+    line-height: 1.6rem;
+    &.error {
+      @apply text-red-bright-500;
+    }
+    &.disabled {
+      @apply text-navy-blue-600;
+    }
+  }
+  .bordFilledUploaderButtonContainer {
+    @apply relative h-64 w-full;
+    .bordUploaderButtonSkeletonLoader {
+      @apply bg-transparent rounded-md  h-full pointer-events-none;
+    }
+
+    &.stylesSharedBetweenStates {
+      @apply bg-navy-blue-900  rounded-md flex justify-start content-center items-center border border-solid px-16;
+
+      .fileName {
+        @apply text-sm ml-4 truncate;
+      }
+      .floatIconContainer {
+        @apply h-full flex items-center content-center justify-end w-16 right-16 top-0 absolute;
+      }
+    }
+    .buttonItemsContainer {
+      @apply flex items-center content-center;
+      width: calc(100% - 30px);
+    }
+
+    &.disabled {
+      @apply border-navy-blue-600 cursor-not-allowed;
+      .fileName {
+        @apply text-white;
+      }
+      .floatIconContainer {
+        svg path {
+          @apply stroke-navy-blue-600;
+        }
+      }
+    }
+    &.default {
+      @apply border-cyan-300 cursor-pointer;
+      .fileName {
+        @apply text-white;
+      }
+      svg path {
+        @apply stroke-white;
+      }
+
+      .floatIconContainer {
+        @apply z-10;
+        svg path {
+          @apply stroke-navy-blue-400;
+        }
+      }
+    }
+    &.error {
+      @apply border-red-bright-500 cursor-pointer;
+      .fileName {
+        @apply text-red-bright-500;
+      }
+      svg path {
+        @apply stroke-red-bright-500;
+      }
+
+      .floatIconContainer {
+        @apply z-10;
+        svg path {
+          @apply stroke-red-bright-500;
+        }
+      }
+    }
+  }
+
+  .bordUploaderButtonContainer {
+    @apply relative h-64 w-full;
+    .hideSystemInput {
+      @apply absolute overflow-hidden opacity-0 h-full w-full cursor-pointer left-0 top-0;
+      &::-webkit-file-upload-button {
+        cursor: pointer;
+      }
+      &.disabledFileButton {
+        @apply cursor-not-allowed;
+        &::-webkit-file-upload-button {
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    &.stylesSharedBetweenStates {
+      @apply rounded-md flex justify-start content-center items-center border border-dashed px-16;
+      .infoDetailsContainer {
+        width: calc(100% - 14px);
+        @apply pl-16;
+        .title {
+          @apply mb-4 truncate;
+          font-size: 1.4rem;
+          line-height: 1.8rem;
+        }
+        .subtitle {
+          @apply text-xs truncate;
+          line-height: 1.6rem;
+        }
+      }
+    }
+    &.default {
+      @apply border-navy-blue-600 bg-navy-blue-900;
+      .infoDetailsContainer {
+        .title {
+          @apply text-white;
+          .highlightedTitle {
+            @apply text-cyan-300;
+          }
+        }
+        .subtitle {
+          @apply text-navy-blue-400;
+        }
+      }
+      &:hover {
+        @apply bg-cyan-900 border-cyan-300;
+      }
+    }
+
+    &.error {
+      @apply border-red-bright-500 bg-navy-blue-900;
+      svg path {
+        @apply stroke-red-bright-500;
+      }
+      .infoDetailsContainer {
+        .title {
+          @apply text-danger;
+        }
+        .subtitle {
+          @apply text-danger;
+        }
+      }
+    }
+    &.disabled {
+      @apply border-navy-blue-600 bg-navy-blue-700;
+      svg path {
+        @apply stroke-navy-blue-600;
+      }
+      .infoDetailsContainer {
+        .title {
+          @apply text-navy-blue-600;
+        }
+        .subtitle {
+          @apply text-navy-blue-600;
+        }
+      }
+    }
+  }
+  .textError {
+    @apply mt-4 text-red-bright-500 truncate;
+    font-size: 1rem;
+    height: 1.3rem;
+  }
+}

@@ -1,0 +1,19 @@
+import { ComponentProps } from "react";
+import { bordColorTheme } from "../../../styles/constants";
+
+const BordXSquareIcon = (props: ComponentProps<"svg">) => {
+  const { stroke } = props;
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <path
+        stroke={stroke ||  bordColorTheme.navyBlue[400]}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        d="m9 9 6 6m0-6-6 6M5 3h14c1.1046 0 2 .89543 2 2v14c0 1.1046-.8954 2-2 2H5c-1.10457 0-2-.8954-2-2V5c0-1.10457.89543-2 2-2Z"
+      />
+    </svg>
+  );
+};
+
+export default BordXSquareIcon;

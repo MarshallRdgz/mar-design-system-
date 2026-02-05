@@ -1,0 +1,152 @@
+.bordTextInput,
+.bordTextInputSkeletonLoader {
+  // BASE STYLES
+  label,
+  .labelSkeletonLoader {
+    @apply block mb-4 text-white text-bord-sm select-none;
+  }
+
+  .inputContainer,
+  .inputSkeletonLoader {
+    @apply h-40 px-16 flex items-center bg-transparent rounded-md border border-solid border-disabled-fg-secondary text-bord-md;
+
+    .bordOneToneIcon {
+      @apply mr-8;
+      svg path {
+        @apply stroke-disabled-fg-secondary;
+      }
+    }
+
+    .passwordToggle {
+      @apply cursor-pointer;
+    }
+
+    input {
+      @apply h-full w-full bg-transparent text-disabled-fg-secondary truncate;
+
+      &:focus {
+        @apply outline-none;
+      }
+
+      &::placeholder {
+        @apply text-disabled-fg-secondary;
+      }
+    }
+  }
+
+  .caption {
+    @apply mt-4 text-content-secondary text-bord-caption select-none;
+  }
+
+  .errorText {
+    @apply mt-4 text-danger;
+  }
+
+  // **************************** //
+  // STATUS SPECIFIC STYLES
+  &.filled {
+    .inputContainer {
+      @apply border-stroke-interactive;
+
+      .bordOneToneIcon svg path {
+        @apply stroke-white;
+      }
+
+      input {
+        @apply text-white;
+      }
+    }
+  }
+
+  &:hover {
+    .inputContainer {
+      @apply border-white;
+
+      .bordOneToneIcon svg path {
+        @apply stroke-white;
+      }
+
+      input {
+        @apply text-white;
+        &::placeholder {
+          @apply text-white;
+        }
+        &:focus {
+          &::placeholder {
+            @apply text-content-secondary;
+          }
+        }
+      }
+    }
+  }
+
+  &.focused {
+    .inputContainer {
+      @apply border-primary-bg-default;
+
+      .bordOneToneIcon svg path {
+        @apply stroke-white;
+      }
+    }
+  }
+
+  &.error {
+    label {
+      @apply text-danger;
+    }
+    .inputContainer {
+      @apply border-danger;
+
+      .bordOneToneIcon svg path {
+        @apply stroke-danger;
+      }
+
+      input {
+        @apply text-danger;
+        &::placeholder {
+          @apply text-danger;
+        }
+      }
+    }
+  }
+
+  &.disabled {
+    @apply cursor-not-allowed;
+    label {
+      @apply text-disabled-fg-secondary cursor-not-allowed;
+    }
+    .inputContainer {
+      @apply border-disabled-fg-secondary bg-disabled-bg-secondary;
+
+      .bordOneToneIcon svg path {
+        @apply stroke-disabled-fg-secondary;
+      }
+
+      input {
+        @apply text-disabled-fg-secondary cursor-not-allowed;
+        &::placeholder {
+          @apply text-disabled-fg-secondary;
+        }
+      }
+      .passwordToggle {
+        @apply cursor-not-allowed;
+      }
+    }
+
+    .caption,
+    .errorText {
+      @apply text-disabled-fg-secondary;
+    }
+  }
+}
+
+// **************************** //
+// SKELETON LOADER SPECIFIC STYLES
+.bordTextInputSkeletonLoader {
+  .labelSkeletonLoader {
+    @apply w-4/6 h-14 rounded;
+  }
+  .inputSkeletonLoader {
+    @apply border-none;
+  }
+}

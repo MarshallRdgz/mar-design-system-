@@ -1,0 +1,57 @@
+.bordCheckBox {
+  @apply flex gap-8 items-center;
+  .bordCheckBoxLabel {
+    @apply text-content text-bord-md select-none;
+  }
+  &.active {
+    .bordCheckBoxLabel {
+      @apply text-cyan-300;
+    }
+  }
+  &.disabled,
+  &.inactive {
+    .bordCheckBoxLabel {
+      @apply text-navy-blue-600 cursor-not-allowed;
+    }
+  }
+}
+.bordCheckBoxButtonSvg {
+  svg {
+    @apply select-none cursor-pointer;
+    .largeRect {
+      @apply stroke-navy-blue-400 fill-transparent;
+    }
+    .smallRect {
+      @apply stroke-transparent;
+    }
+  }
+  &.active {
+    svg {
+      .largeRect {
+        @apply stroke-cyan-300 fill-primary-bg-secondary;
+      }
+      .smallRect {
+        @apply stroke-cyan-300;
+      }
+    }
+  }
+  &.disabled {
+    svg {
+      @apply cursor-not-allowed;
+      .largeRect {
+        @apply stroke-navy-blue-600 fill-navy-blue-700;
+      }
+    }
+  }
+  &.inactive {
+    svg {
+      @apply cursor-not-allowed;
+      .largeRect {
+        @apply stroke-navy-blue-600 fill-navy-blue-700;
+      }
+      .smallRect {
+        @apply stroke-navy-blue-600;
+      }
+    }
+  }
+}

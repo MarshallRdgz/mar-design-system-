@@ -1,0 +1,19 @@
+.sidebarFilter {
+  @apply mb-16 overflow-y-hidden;
+  transition: all 0.5s ease-out;
+
+  &:last-of-type {
+    @apply mb-0;
+  }
+
+  .sidebarFilterTitle {
+    @apply flex items-center justify-between cursor-pointer capitalize select-none;
+    .sidebarFilterName {
+      @apply text-bord-md text-white;
+    }
+  }
+
+  .filterOptionsContainer {
+    @apply mt-8;
+  }
+}

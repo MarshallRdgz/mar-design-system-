@@ -1,0 +1,47 @@
+.bordTooltipMessageContainer {
+  @apply group-hover:opacity-100 absolute text-xs text-white bg-navy-blue-700 rounded-md border-solid border-[0.5px] border-navy-blue-600 opacity-0  transition-opacity duration-300 flex min-w-180 max-w-500 w-max p-8 flex-col gap-8;
+
+  &.tooltipTop {
+    @apply bottom-full left-1/2 transform -translate-x-1/2 mb-2;
+  }
+
+  &.tooltipBottom {
+    @apply top-full left-1/2 transform -translate-x-1/2 mt-2;
+  }
+
+  &.tooltipLeft {
+    @apply right-full top-1/2 transform -translate-y-1/2 mr-2;
+  }
+
+  &.tooltipRight {
+    @apply left-full top-1/2 transform -translate-y-1/2 ml-2;
+  }
+
+  .ctaDivider {
+    @apply w-full h-[1px] bg-stroke-interactive my-2 opacity-30;
+  }
+
+  .oneCta {
+    @apply flex items-center gap-2 cursor-pointer justify-center text-primary-bg-default;
+
+    svg path {
+      @apply stroke-primary-bg-default;
+    }
+  }
+
+  .twoCta {
+    @apply flex justify-between items-center;
+  }
+
+  .twoCtaFirstButton {
+    @apply px-2 py-1 bg-blue-500 text-white rounded;
+  }
+
+  .twoCtaSecondButton {
+    @apply px-2 py-1 bg-blue-500 text-white rounded;
+  }
+
+  .messageText {
+    @apply select-none;
+  }
+}

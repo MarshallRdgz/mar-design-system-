@@ -1,0 +1,14 @@
+@use '../../../../styles/mixins.scss' as mixins;
+
+.sidebarSuggestionsFilters {
+  @apply absolute bottom-76 left-12 w-176 h-332 py-16 px-12 bg-layout-level2 rounded-md;
+
+  .question {
+    @apply mb-16 text-content-secondary text-bord-sm font-bold text-center select-none;
+  }
+
+  .suggestionFiltersSection {
+    @apply h-260 overflow-y-auto;
+    @include mixins.visibleScrollBar();
+  }
+}
