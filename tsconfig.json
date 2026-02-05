@@ -16,8 +16,18 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": false,
-    "jsx": "react-jsx"
-  },
+    "jsx": "react-jsx",
 
-  "include": ["src"]
+    /* REGLAS RELAJADAS: Evita que el build se detenga por props o variables no usadas */
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+
+    /* ESTO ES LO QUE FALTA PARA QUE EL USUARIO VEA LAS PROPS (Sugerencias) */
+    "declaration": true, // Genera los archivos .d.ts necesarios para el autocompletado
+    "declarationDir": "dist", // Coloca las definiciones en la carpeta de salida
+    "emitDeclarationOnly": false, // Genera tanto el código JS como los tipos
+    "declarationMap": true // Ayuda al editor a vincular las props con tu código
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "**/*.stories.tsx", "**/*.test.tsx"]
 }

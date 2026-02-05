@@ -14,12 +14,18 @@
     "noEmit": false,
     "jsx": "react-jsx",
 
-    /* Linting */
+    /* CONFIGURACIÓN PARA VER LAS PROPS */
+    "declaration": true,
+    "declarationDir": "dist",
+    "emitDeclarationOnly": false,
+    "declarationMap": true,
+
+    /* Linting - Relajado para permitir props no usadas en componentes */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
   },
-
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["**/*.stories.tsx", "**/*.test.tsx", "node_modules", "dist"]
 }

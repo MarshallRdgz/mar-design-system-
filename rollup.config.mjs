@@ -13,7 +13,7 @@ export default {
       interop: 'auto',
     },
     {
-      file: 'dist/index.esm.js', // Este es el que usa Vite/Boilerplate
+      file: 'dist/index.esm.js',
       format: 'esm',
       sourcemap: true,
     },
@@ -22,10 +22,16 @@ export default {
   plugins: [
     resolve(),
     commonjs(),
-    typescript({ useTsconfigDeclarationDir: true }),
+    // 1. GENERACIÓN DE PROPS: Conectamos con el tsconfig que genera los tipos (.d.ts)
+    typescript({
+      tsconfig: 'tsconfig.app.json',
+      useTsconfigDeclarationDir: true,
+      clean: true,
+    }),
+    // 2. CSS SIN ERRORES: Genera archivo físico Y permite inyección
     postcss({
-      extract: false, // 👈 CAMBIO: Ponlo en false o bórralo
-      inject: true, // 👈 AÑADIR: Esto inyecta el CSS en el <head> automáticamente
+      extract: 'index.css', // Genera dist/index.css (respeta tu package.json)
+      inject: true, // Permite que el CSS funcione aunque el usuario no lo importe
       minimize: true,
       use: [
         [
@@ -37,5 +43,6 @@ export default {
       ],
     }),
   ],
+  // 3. EXTERNOS: Evitamos duplicar React para que no haya errores de "Hooks"
   external: ['react', 'react-dom', 'react/jsx-runtime'],
 };

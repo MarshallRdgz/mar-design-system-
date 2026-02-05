@@ -1,6 +1,6 @@
 {
   "name": "mar-design-system",
-  "version": "0.1.10",
+  "version": "0.1.12",
   "private": false,
   "type": "module",
   "main": "dist/index.js",
