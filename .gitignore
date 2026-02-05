@@ -23,3 +23,19 @@ tsconfig.tsbuildinfo
 *.njsproj
 *.sln
 *.sw?
+
+# Library specific
+src
+.storybook
+storybook-static
+rollup.config.mjs
+tsconfig.json
+.nvmrc
+.github
+yarn.lock
+*.stories.tsx
+*.test.tsx
+.eslint*
+.prettier*
+husky
+!dist/
