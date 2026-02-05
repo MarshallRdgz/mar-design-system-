@@ -39,3 +39,6 @@ yarn.lock
 # .prettier*
 husky
 !dist/
+
+# Build output
+dist/
