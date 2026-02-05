@@ -17,7 +17,14 @@
     "declaration": true,
     "declarationDir": "dist",
     "emitDeclarationOnly": false,
-    "noEmit": false
+    "noEmit": false,
+
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
-  "include": ["src"]
+
+  "include": ["src"],
+
+  // 🔥 ESTO ES EL FIX
+  "exclude": ["**/*.stories.ts", "**/*.stories.tsx", "**/*.test.ts", "**/*.test.tsx"]
 }

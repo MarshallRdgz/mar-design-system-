@@ -1,0 +1,2 @@
+declare const SquareMontenegro: () => import("react/jsx-runtime").JSX.Element;
+export default SquareMontenegro;
