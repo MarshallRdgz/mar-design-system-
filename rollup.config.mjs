@@ -4,16 +4,33 @@ import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
 
 export default {
-  input: 'src/components/index.ts',
+  input: 'src/index.tsx',
+
   output: [
-    { file: 'dist/index.js', format: 'cjs', sourcemap: true },
-    { file: 'dist/index.esm.js', format: 'esm', sourcemap: true },
+    {
+      file: 'dist/index.js',
+      format: 'cjs',
+      sourcemap: true,
+    },
+    {
+      file: 'dist/index.esm.js',
+      format: 'esm',
+      sourcemap: true,
+    },
   ],
+
+  // 🔥 AQUÍ ESTÁ LA MAGIA
+  external: ['react', 'react-dom', 'react/jsx-runtime'],
+
   plugins: [
     resolve(),
     commonjs(),
-    typescript({ useTsconfigDeclarationDir: true }),
-    postcss({ extract: true, minimize: true, use: ['sass'] }),
+    postcss({
+      extract: true,
+    }),
+    typescript({
+      tsconfig: './tsconfig.json',
+      useTsconfigDeclarationDir: true,
+    }),
   ],
-  external: ['react', 'react-dom'],
 };
