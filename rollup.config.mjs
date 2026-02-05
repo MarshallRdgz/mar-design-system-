@@ -22,13 +22,12 @@ export default {
   plugins: [
     resolve(),
     commonjs(),
-    // ESTO GENERA LAS PROPS
     typescript({
       tsconfig: 'tsconfig.app.json',
-      useTsconfigDeclarationDir: true,
+      // Cambiado a false para que use el declarationDir del tsconfig
+      useTsconfigDeclarationDir: false, 
       clean: true,
     }),
-    // ESTO HACE QUE LOS ESTILOS SE VEAN SIN IMPORTAR NADA
     postcss({
       inject: true,
       extract: false,
