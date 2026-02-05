@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react/*';
-import BordFlag from './BordFlag';
+import { BordFlag } from './BordFlag';
 
 const meta = {
   title: 'BordFlag',
