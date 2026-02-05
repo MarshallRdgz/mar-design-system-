@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import { IBordEmptyStateProps } from './BordEmptyState.types';
 import BordIlustrationIcon from '../BordIlustrationIcon/BordIlustrationIcon';
-import BordButton from '../BordButton/BordButton';
+import { BordButton } from '../BordButton/BordButton';
 import BordTwoToneIcon from '../BordTwoToneIcon/BordTwoToneIcon';
 import BordOneToneIcon from '../BordOneToneIcon/BordOneToneIcon';
 import '../BordEmptyState/BordEmptyState.scss';
