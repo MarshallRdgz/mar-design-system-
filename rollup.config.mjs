@@ -22,16 +22,16 @@ export default {
   plugins: [
     resolve(),
     commonjs(),
-    // 1. GENERACIÓN DE PROPS: Conectamos con el tsconfig que genera los tipos (.d.ts)
+    // ESTO GENERA LAS PROPS
     typescript({
       tsconfig: 'tsconfig.app.json',
       useTsconfigDeclarationDir: true,
       clean: true,
     }),
-    // 2. CSS SIN ERRORES: Genera archivo físico Y permite inyección
+    // ESTO HACE QUE LOS ESTILOS SE VEAN SIN IMPORTAR NADA
     postcss({
-      extract: 'index.css', // Genera dist/index.css (respeta tu package.json)
-      inject: true, // Permite que el CSS funcione aunque el usuario no lo importe
+      inject: true,
+      extract: false,
       minimize: true,
       use: [
         [
@@ -43,6 +43,5 @@ export default {
       ],
     }),
   ],
-  // 3. EXTERNOS: Evitamos duplicar React para que no haya errores de "Hooks"
   external: ['react', 'react-dom', 'react/jsx-runtime'],
 };
