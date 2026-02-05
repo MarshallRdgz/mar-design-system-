@@ -3,28 +3,23 @@
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
-
     "module": "ESNext",
-    "moduleResolution": "node",
-
-    "jsx": "react-jsx",
-
-    "strict": true,
     "skipLibCheck": true,
 
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": false,
+    "isolatedModules": true,
+    "moduleDetection": "force",
     "noEmit": false,
-    "isolatedModules": false,
+    "jsx": "react-jsx",
 
+    /* Linting */
+    "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "noFallthroughCasesInSwitch": true
   },
 
-  "include": ["src"],
-
-  // 🔥 EVITA PROBLEMAS CON STORYBOOK
-  "exclude": ["**/*.stories.ts", "**/*.stories.tsx", "**/*.test.ts", "**/*.test.tsx"]
+  "include": ["src"]
 }
