@@ -1,6 +1,6 @@
 {
-  "name": "@bord-mar/mar-design-system",
-  "version": "0.1.15",
+  "name": "mar-design-system",
+  "version": "0.1.16",
   "private": false,
   "type": "module",
   "main": "dist/index.js",
