@@ -1,5 +1,5 @@
 {
-  "name": "mar-design-system",
+  "name": "@bord-mar/mar-design-system",
   "version": "0.1.15",
   "private": false,
   "type": "module",
